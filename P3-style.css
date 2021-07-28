@@ -13,10 +13,136 @@ body
     padding: 0;
 }
 
+h1
+{
+    text-align: start;
+    width: 100%;
+    margin: 0;
+}
+
 h3
 {
     font-family: 'shrikhand', 'Times New Roman', Times, serif;
 }
 
-/* Page acceuil */
+/* Page acceuil Mobile */
+@media screen and (max-width: 799px)
+{
+    .hlogo
+    {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    padding: 2%;
+    margin: auto;
+    margin-top: 2%;
+    }
 
+    .hlogo>img
+    {
+    width: 100%;
+    height: 100%;
+    }
+
+    .localisation
+    {
+    width: 100%;
+    background-color: #dddddd;
+    border-top: 3px solid grey;
+    display: inline-block;
+    text-align: center;
+    }
+
+    .explication
+    {
+    background-color: #f2f2f2;
+    margin: auto;
+    padding: 2%;
+    text-align: center;
+    }
+
+    .explication>h1
+    {
+        text-align: center;
+    }
+
+    .bexploration>a
+    {
+    text-decoration: none;
+    color: white;
+    padding: 2%;
+    background-color: #9356DC;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 1px grey;
+    }
+
+    .bexploration
+    {
+        margin: 2%;
+        padding: 2%;
+    }
+
+    .fonctionnement
+    {
+        padding: 2%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .F1
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 2%;
+    }
+
+    .F2
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 2%;
+    }
+
+    .F3
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 2%;
+    }
+
+    .num
+    {
+        background-color: #9356DC;
+        color: white;
+        width: 20px;
+        height: 20px;
+        padding: 1%;
+        border-radius: 100%;
+    }
+
+    .fonctionnement p
+    {
+        margin: 0;
+    }
+
+    .fonctionnement .fas
+    {
+        size: 1.1em;
+    }
+}
+
+/* Tablette */
+@media screen and (min-width: 800px) and (max-width: 1440px)
+{
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px)
+{
+
+}
