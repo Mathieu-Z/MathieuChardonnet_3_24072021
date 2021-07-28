@@ -1,11 +1,22 @@
 @font-face
 {
-    
+    font-family: 'roboto';
+    src: url(fonts-roboto/Roboto-Medium.ttf);
+    font-family: 'shrikhand';
+    src: url(fonts-shrikhand/Shrikhand-Regular.otf);
 }
 
 body
 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'roboto', 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
+
+h3
+{
+    font-family: 'shrikhand', 'Times New Roman', Times, serif;
+}
+
+/* Page acceuil */
+
