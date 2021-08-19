@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "roboto";
+  src: url(fonts-roboto/Roboto-Medium.ttf);
+  font-family: "shrikhand";
+  src: url(fonts-shrikhand/Shrikhand-Regular.otf);
+}
+body {
+  font-family: "roboto", "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: start;
+  width: 100%;
+  margin: 0;
+}
+
+h3 {
+  font-family: "shrikhand", "Times New Roman", Times, serif;
+}
+
+p {
+  margin: 0;
+}
+
+.hlogo {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  padding: 2%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.hlogo > img {
+  width: 100%;
+  height: 100%;
+}
+
 .localisation {
   display: flex;
   flex-direction: row;
@@ -8,8 +48,7 @@
   border-top: 3px solid #b1b1b1;
   text-align: center;
 }
-
-.localisation > .fas {
+.localisation .fas {
   margin-right: 2%;
 }
 
@@ -19,29 +58,31 @@
   padding: 2%;
   text-align: center;
 }
-
-.explication > h1 {
+.explication h1 {
   text-align: center;
-}
-
-.bexploration > a {
-  text-decoration: none;
-  color: white;
-  padding: 2%;
-  background-color: #9356DC;
-  border-radius: 30px 30px 30px 30px;
-  box-shadow: 1px 1px 1px grey;
 }
 
 .bexploration {
   margin: 2%;
   padding: 2%;
 }
+.bexploration a {
+  text-decoration: none;
+  color: white;
+  padding: 2%;
+  background-color: #9256dc;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 1px 1px 1px grey;
+}
 
 .fonctionnement {
   padding: 2%;
   display: flex;
   flex-direction: column;
+}
+.fonctionnement .fas {
+  padding: 2%;
+  font-size: 1.1em;
 }
 
 .F1 {
@@ -76,11 +117,14 @@
   flex-wrap: nowrap;
   padding: 2%;
   padding-left: 0;
-  background-color: #9256dc46;
+  background-color: #f2f2f2;
   border-radius: 20px;
   box-shadow: 0px 3px 5px #b1b1b1;
   margin-bottom: 2%;
   align-items: center;
+}
+.F3--purple {
+  background-color: #9256dc25;
 }
 
 .F1 > .fas {
@@ -96,16 +140,11 @@
 }
 
 .num {
-  background-color: #9356DC;
+  background-color: #9256dc;
   color: white;
   width: 20px;
   height: 20px;
   padding: 1%;
   border-radius: 100%;
   text-align: center;
-}
-
-.fonctionnement .fas {
-  padding: 2%;
-  font-size: 1.1em;
 }/*# sourceMappingURL=P3-style-index.css.map */

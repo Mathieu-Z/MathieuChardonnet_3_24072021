@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"P3-style-page.css"}
+{"version":3,"sources":["P3-style-main.scss","P3-style-page.scss"],"names":[],"mappings":"AAAA;EAEI,qBAAA;EACA,wCAAA;EACA,wBAAA;EACA,+CAAA;ACAJ;ADGA;EAEI,sDAAA;EACA,SAAA;EACA,UAAA;ACFJ;;ADSA;EAEI,iBAAA;EACA,WAAA;EACA,SAAA;ACPJ;;ADUA;EAEI,yDAAA;ACRJ;;ADWA;EAEI,SAAA;ACTJ;;ADYA;EAEI,YAAA;EACA,YAAA;EACA,kBAAA;EACA,WAAA;EACA,YAAA;EACA,cAAA;ACVJ;;ADaA;EAEI,WAAA;EACA,YAAA;ACXJ","file":"P3-style-page.css"}
