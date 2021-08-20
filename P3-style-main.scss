@@ -6,16 +6,24 @@
     src: url(fonts-shrikhand/Shrikhand-Regular.otf);
 }
 
+$primary-color: #9256dc;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$grey-color: #eaeaea;
+$darkergrey-color: darken($grey-color,50%);
+$palegrey-color: #f6f6f6;
+$footer-color: #353535;
+
 body
 {
     font-family: 'roboto', 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
+    p
+    {
+        margin: 0;
+    }
 }
-
-$primary-color: #9256dc;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
 
 h1
 {
@@ -29,11 +37,6 @@ h3
     font-family: 'shrikhand', 'Times New Roman', Times, serif;
 }
 
-p
-{
-    margin: 0;
-}
-
 .hlogo
 {
     width: 300px;
@@ -41,11 +44,54 @@ p
     text-align: center;
     padding: 2%;
     margin: auto;
-    margin-top: 2%;
+    img
+    {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.hlogo>img
+footer
 {
-    width: 100%;
-    height: 100%;
+    background-color: $footer-color;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    .flogo
+    {
+        padding-bottom: 1%;
+        img
+        {
+            color: white;
+            width: 150px;
+            height: 30px;
+        }
+    }
+    .flien
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        clear: both;
+        @media (max-width: 799px)
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        a
+        {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            text-align: start;
+            @media (max-width:799px)
+            {
+                margin-bottom: 2%;
+            }
+            .fas
+            {
+                margin-right: 2%;
+            }
+        }
+    }
 }

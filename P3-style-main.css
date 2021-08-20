@@ -9,6 +9,9 @@ body {
   margin: 0;
   padding: 0;
 }
+body p {
+  margin: 0;
+}
 
 h1 {
   text-align: start;
@@ -20,20 +23,55 @@ h3 {
   font-family: "shrikhand", "Times New Roman", Times, serif;
 }
 
-p {
-  margin: 0;
-}
-
 .hlogo {
   width: 300px;
   height: 50px;
   text-align: center;
   padding: 2%;
   margin: auto;
-  margin-top: 2%;
 }
-
-.hlogo > img {
+.hlogo img {
   width: 100%;
   height: 100%;
+}
+
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+footer .flogo {
+  padding-bottom: 1%;
+}
+footer .flogo img {
+  color: white;
+  width: 150px;
+  height: 30px;
+}
+footer .flien {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  clear: both;
+}
+@media (max-width: 799px) {
+  footer .flien {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+footer .flien a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+}
+@media (max-width: 799px) {
+  footer .flien a {
+    margin-bottom: 2%;
+  }
+}
+footer .flien a .fas {
+  margin-right: 2%;
 }/*# sourceMappingURL=P3-style-main.css.map */
