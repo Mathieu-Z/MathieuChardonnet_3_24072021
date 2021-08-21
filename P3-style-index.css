@@ -24,15 +24,26 @@ h3 {
 }
 
 .hlogo {
-  width: 300px;
+  display: flex;
   height: 50px;
-  text-align: center;
-  padding: 2%;
+  align-items: center;
+  padding: 1%;
   margin: auto;
 }
+.hlogo a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+.hlogo a .fas {
+  font-size: 1.75em;
+}
 .hlogo img {
-  width: 100%;
+  width: 300px;
   height: 100%;
+  margin: auto;
+  position: relative;
+  left: -15px;
 }
 
 footer {
@@ -58,7 +69,6 @@ footer .flien {
   footer .flien {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin-bottom: 2%;
   }
 }
 footer .flien a {
@@ -68,8 +78,17 @@ footer .flien a {
   flex-direction: row;
   text-align: start;
 }
+@media (max-width: 799px) {
+  footer .flien a {
+    margin-bottom: 2%;
+  }
+}
 footer .flien a .fas {
   margin-right: 2%;
+}
+
+.hlogo img {
+  left: 0;
 }
 
 .localisation {
