@@ -14,9 +14,9 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    padding: 2%;
+    padding: 15px;
     background-color: $grey-color;
-    border-top: 3px solid rgb(177, 177, 177);
+    box-shadow: 0px 5px 5px -5px inset $darkergrey-color;
     text-align: center;
     .fas
     {
@@ -28,8 +28,9 @@
 {
     background-color: $palegrey-color;
     margin: auto;
-    padding: 2%;
+    padding: 10px;
     text-align: center;
+    margin-bottom: 15px;
     h1
     {
         text-align: center;
@@ -38,16 +39,12 @@
 
 .bexploration
 {
-    margin: 2%;
-    padding: 2%;
+    display: flex;
+    margin: 20px;
     a
     {
-        text-decoration: none;
-        color: white;
-        padding: 2%;
-        background-color: $primary-color;
-        border-radius: 50px 50px 50px 50px;
-        box-shadow: 1px 1px 1px grey;
+        @include lien($color: white);
+        @include btn();
     }
 }
 
@@ -63,43 +60,60 @@
     }
 }
 
-@mixin F0($background-color: $palegrey-color) {
+@mixin F0($background-color: $palegrey-color, $margin-right: 5%) {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    min-height: 40px;
+    min-width: 240px;
     padding: 1%;
     padding-left: 0;
+    margin-right: $margin-right;
     background-color: $background-color;
     border-radius: 20px;
-    box-shadow: 0px 3px 5px rgb(177, 177, 177);
-    margin-top: 2%;
+    box-shadow: 0px 4px 7px -3px $darkergrey-color;
     align-items: center;
-}
-
-.F1
-{
-    @include F0();
-    .fas
+    @media (max-width: 799px)
     {
-        color: $darkergrey-color;
+        width: auto;
+        margin-bottom: 12px;
+        padding: 10px;
+        padding-left: 0;
+        margin-right: 0;
     }
 }
 
-.F2
+.Fbox
 {
-    @include F0();
-    .fas
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width:799px)
     {
-        color: $darkergrey-color;
+        grid-template-columns: 1fr;
     }
-}
-
-.F3
-{
-    @include F0($background-color: #9256dc25);
-    .fas
+    .F1
     {
-        color: $primary-color;
+        @include F0();
+        .fas
+        {
+            color: $darkergrey-color;
+        }
+    }
+    .F2
+    {
+        @include F0();
+        .fas
+        {
+            color: $darkergrey-color;
+        }
+    }
+    .F3
+    {
+        @include F0($background-color: #9256dc25, $margin-right:0);
+        .fas
+        {
+            color: $primary-color;
+        }
     }
 }
 
@@ -114,3 +128,29 @@
 	text-align: center;
 }
 
+@mixin image
+{
+    width: 100%;
+    object-fit: cover;
+    .new
+    {
+        background-color: $tertiary-color;
+        color: darken($color: $tertiary-color, $amount: 40%);
+        padding: 10px;
+    }
+}
+
+#ancre-restaurant
+{
+    padding: 2%;
+    background-color: $palegrey-color;
+    .restaurant
+    {
+        display: flex;
+        a
+        {
+            @include lien();
+            @include image();
+        }
+    }
+}

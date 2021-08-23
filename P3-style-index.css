@@ -14,9 +14,11 @@ body p {
 }
 
 h1 {
+  font-size: 1.75em;
   text-align: start;
   width: 100%;
   margin: 0;
+  margin-bottom: 1%;
 }
 
 h3 {
@@ -27,13 +29,13 @@ h3 {
   display: flex;
   height: 50px;
   align-items: center;
-  padding: 1%;
+  padding: 10px;
   margin: auto;
 }
 .hlogo a {
-  display: flex;
   text-decoration: none;
   color: black;
+  display: flex;
 }
 .hlogo a .fas {
   font-size: 1.75em;
@@ -96,9 +98,9 @@ footer .flien a .fas {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  padding: 2%;
+  padding: 15px;
   background-color: #eaeaea;
-  border-top: 3px solid #b1b1b1;
+  box-shadow: 0px 5px 5px -5px inset #6b6b6b;
   text-align: center;
 }
 .localisation .fas {
@@ -108,24 +110,28 @@ footer .flien a .fas {
 .explication {
   background-color: #f6f6f6;
   margin: auto;
-  padding: 2%;
+  padding: 10px;
   text-align: center;
+  margin-bottom: 15px;
 }
 .explication h1 {
   text-align: center;
 }
 
 .bexploration {
-  margin: 2%;
-  padding: 2%;
+  display: flex;
+  margin: 20px;
 }
 .bexploration a {
   text-decoration: none;
   color: white;
-  padding: 2%;
-  background-color: #9256dc;
+  width: 200px;
+  height: 20px;
+  padding: 20px;
+  margin: auto;
+  background: linear-gradient(0.48turn, #FF79DA, #9256dc);
   border-radius: 50px 50px 50px 50px;
-  box-shadow: 1px 1px 1px grey;
+  box-shadow: 0px 4px 7px -3px #6b6b6b;
 }
 
 .fonctionnement {
@@ -138,51 +144,91 @@ footer .flien a .fas {
   font-size: 1.1em;
 }
 
-.F1 {
+.Fbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 799px) {
+  .Fbox {
+    grid-template-columns: 1fr;
+  }
+}
+.Fbox .F1 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  min-height: 40px;
+  min-width: 240px;
   padding: 1%;
   padding-left: 0;
+  margin-right: 5%;
   background-color: #f6f6f6;
   border-radius: 20px;
-  box-shadow: 0px 3px 5px #b1b1b1;
-  margin-top: 2%;
+  box-shadow: 0px 4px 7px -3px #6b6b6b;
   align-items: center;
 }
-.F1 .fas {
+@media (max-width: 799px) {
+  .Fbox .F1 {
+    width: auto;
+    margin-bottom: 12px;
+    padding: 10px;
+    padding-left: 0;
+    margin-right: 0;
+  }
+}
+.Fbox .F1 .fas {
   color: #6b6b6b;
 }
-
-.F2 {
+.Fbox .F2 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  min-height: 40px;
+  min-width: 240px;
   padding: 1%;
   padding-left: 0;
+  margin-right: 5%;
   background-color: #f6f6f6;
   border-radius: 20px;
-  box-shadow: 0px 3px 5px #b1b1b1;
-  margin-top: 2%;
+  box-shadow: 0px 4px 7px -3px #6b6b6b;
   align-items: center;
 }
-.F2 .fas {
+@media (max-width: 799px) {
+  .Fbox .F2 {
+    width: auto;
+    margin-bottom: 12px;
+    padding: 10px;
+    padding-left: 0;
+    margin-right: 0;
+  }
+}
+.Fbox .F2 .fas {
   color: #6b6b6b;
 }
-
-.F3 {
+.Fbox .F3 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  min-height: 40px;
+  min-width: 240px;
   padding: 1%;
   padding-left: 0;
+  margin-right: 0;
   background-color: #9256dc25;
   border-radius: 20px;
-  box-shadow: 0px 3px 5px #b1b1b1;
-  margin-top: 2%;
+  box-shadow: 0px 4px 7px -3px #6b6b6b;
   align-items: center;
 }
-.F3 .fas {
+@media (max-width: 799px) {
+  .Fbox .F3 {
+    width: auto;
+    margin-bottom: 12px;
+    padding: 10px;
+    padding-left: 0;
+    margin-right: 0;
+  }
+}
+.Fbox .F3 .fas {
   color: #9256dc;
 }
 
@@ -194,4 +240,24 @@ footer .flien a .fas {
   padding: 0.5%;
   border-radius: 100%;
   text-align: center;
+}
+
+#ancre-restaurant {
+  padding: 2%;
+  background-color: #f6f6f6;
+}
+#ancre-restaurant .restaurant {
+  display: flex;
+}
+#ancre-restaurant .restaurant a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#ancre-restaurant .restaurant a .new {
+  background-color: #99E2D0;
+  color: #278870;
+  padding: 10px;
 }/*# sourceMappingURL=P3-style-index.css.map */

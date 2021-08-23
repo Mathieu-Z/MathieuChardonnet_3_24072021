@@ -14,9 +14,11 @@ body p {
 }
 
 h1 {
+  font-size: 1.75em;
   text-align: start;
   width: 100%;
   margin: 0;
+  margin-bottom: 1%;
 }
 
 h3 {
@@ -27,13 +29,13 @@ h3 {
   display: flex;
   height: 50px;
   align-items: center;
-  padding: 1%;
+  padding: 10px;
   margin: auto;
 }
 .hlogo a {
-  display: flex;
   text-decoration: none;
   color: black;
+  display: flex;
 }
 .hlogo a .fas {
   font-size: 1.75em;

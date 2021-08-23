@@ -14,14 +14,21 @@ $darkergrey-color: darken($grey-color,50%);
 $palegrey-color: #f6f6f6;
 $footer-color: #353535;
 
-@mixin btn {
-    width: 300px;
-    height: 50px;
-    margin: 2%;
-    padding: 2%;
-    background-color: $primary-color;
+@mixin lien($color: black ) 
+{
+    text-decoration: none;
+    color: $color;
+}
+
+@mixin btn($background-color: linear-gradient(0.48turn, $secondary-color, $primary-color)) 
+{
+    width: 200px;
+    height: 20px;
+    padding: 20px;
+    margin: auto;
+    background: $background-color;
     border-radius: 50px 50px 50px 50px;
-    box-shadow: 1px 1px 1px $darkergrey-color;
+    box-shadow: 0px 4px 7px -3px $darkergrey-color;    
 }
 
 body
@@ -37,9 +44,11 @@ body
 
 h1
 {
+    font-size: 1.75em;
     text-align: start;
     width: 100%;
     margin: 0;
+    margin-bottom: 1%;
 }
 
 h3
@@ -52,13 +61,12 @@ h3
     display: flex;
     height: 50px;
     align-items: center;
-    padding: 1%;
+    padding: 10px;
     margin: auto;
     a
     {
+        @include lien();
         display: flex;
-        text-decoration: none;
-        color: black;
         .fas
         {
             font-size: 1.75em;
@@ -102,8 +110,7 @@ footer
         }
         a
         {
-            text-decoration: none;
-            color: white;
+            @include lien($color: white);
             display: flex;
             flex-direction: row;
             text-align: start;
