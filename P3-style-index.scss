@@ -128,15 +128,53 @@
 	text-align: center;
 }
 
-@mixin image
+@mixin restoindex
 {
-    width: 100%;
-    object-fit: cover;
+    display: inline-block;
+    flex-direction: row;
+    width: 45%;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 4px 7px -3px $darkergrey-color;
+    margin-top: 2.5%;
+    margin-inline: 2%;
+    @media (max-width: 799px)
+    {
+        width: 100%;
+    }
+    img
+    {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+        z-index: 1;
+    }
     .new
     {
+        width: fit-content;
         background-color: $tertiary-color;
         color: darken($color: $tertiary-color, $amount: 40%);
         padding: 10px;
+        z-index: 2;
+        position: relative;
+    }
+    .blocrestotxt
+    {
+        display: flex;
+        flex-direction: row;
+        .restotxt
+        {
+            padding: 2%;
+            width: 70%;
+            margin: 0;
+        }
+        .coeur
+        {
+            font-size: 1.75em;
+            width: 20%;
+            margin: auto;
+            text-align: center;
+        }
     }
 }
 
@@ -146,11 +184,10 @@
     background-color: $palegrey-color;
     .restaurant
     {
-        display: flex;
         a
         {
             @include lien();
-            @include image();
+            @include restoindex();
         }
     }
 }
