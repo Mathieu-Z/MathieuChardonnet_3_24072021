@@ -1,2 +1,62 @@
 @import "./P3-style-main.scss";
 
+.imgfond
+{
+    position: static;
+    img
+    {
+        width: 100%;
+        object-fit: cover;
+        position: static;
+    }
+}
+
+.titre
+{
+    padding: 2%;
+    div
+    {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+        .coeur
+        {
+            font-size: 1.75em;
+            width: 20%;
+        }
+    }
+
+}
+
+@mixin plat 
+{
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    .txtmenu
+    {
+        width: 70%;
+    }
+    .prix
+    {
+        width: 20%;
+    }
+    .selection
+    {
+        display: none;
+    }
+}
+
+.menu
+{
+    @include plat()
+}
+
+button
+{
+    @include lien($color: white);
+    @include btn();
+}
