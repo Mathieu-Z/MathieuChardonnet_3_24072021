@@ -47,6 +47,7 @@ h5 {
   align-items: center;
   padding: 10px;
   margin: auto;
+  background-color: white;
 }
 .hlogo a {
   text-decoration: none;
@@ -286,16 +287,6 @@ footer .flien a .fas {
   border-radius: 20px 20px 0px 0px;
   z-index: 1;
 }
-#ancre-restaurant .restaurant a .new {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #99E2D0;
-  color: #278870;
-  padding: 10px;
-  z-index: 2;
-  position: relative;
-}
 #ancre-restaurant .restaurant a .blocrestotxt {
   display: flex;
   flex-direction: row;
@@ -310,4 +301,16 @@ footer .flien a .fas {
   width: 20%;
   margin: auto;
   text-align: center;
+}
+#ancre-restaurant .restaurant a .new {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #99E2D0;
+  color: #278870;
+  padding: 10px;
+  z-index: 2;
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }/*# sourceMappingURL=P3-style-index.css.map */
