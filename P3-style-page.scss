@@ -11,6 +11,12 @@
     }
 }
 
+.corps
+{
+    background-color: $palegrey-color;
+    border-radius: 50px 50px 0 0;
+}
+
 .titre
 {
     padding: 2%;
@@ -29,6 +35,21 @@
 
 }
 
+.entrees
+{
+    padding: 2%;
+}
+
+.plats
+{
+    @extend .entrees;
+}
+
+.desserts
+{
+    @extend .entrees;
+}
+
 @mixin plat 
 {
     padding: 10px;
@@ -36,6 +57,8 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 2%;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 4px 7px -3px $darkergrey-color;
     .txtmenu
     {
         width: 70%;
@@ -43,6 +66,12 @@
     .prix
     {
         width: 20%;
+        justify-content: flex-end;
+        p
+        {
+            text-align: end;
+            height: auto;
+        }
     }
     .selection
     {
