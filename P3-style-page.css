@@ -120,7 +120,7 @@ footer .flien a .fas {
 .corps .corpsmenu {
   position: relative;
   background-color: #f6f6f6;
-  bottom: 75px;
+  bottom: 100px;
   border-radius: 50px 50px 0 0;
   padding: 2%;
 }
@@ -147,7 +147,7 @@ footer .flien a .fas {
   background-color: white;
   display: flex;
   flex-direction: row;
-  margin-bottom: 2%;
+  margin-top: 2%;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 7px -3px #6b6b6b;
 }
@@ -166,10 +166,22 @@ footer .flien a .fas {
   display: none;
 }
 
-button {
+.button {
+  display: flex;
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+.button :hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  box-shadow: 0px 0px 10px 2px #6b6b6b;
+}
+.button a {
   text-decoration: none;
   color: white;
-  width: 200px;
+  width: 150px;
   height: 20px;
   padding: 20px;
   margin: auto;

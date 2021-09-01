@@ -11,13 +11,14 @@
         {
             width: 100%;
             object-fit: cover;
+            
         }
     }
     .corpsmenu
     {
         position: relative;
         background-color: $palegrey-color;
-        bottom: 75px;
+        bottom: 100px;
         border-radius: 50px 50px 0 0;
         padding: 2%;
         .titre
@@ -60,7 +61,7 @@
     background-color: white;
     display: flex;
     flex-direction: row;
-    margin-bottom: 2%;
+    margin-top: 2%;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 4px 7px -3px $darkergrey-color;
     .txtmenu
@@ -88,8 +89,29 @@
     @include plat()
 }
 
-button
+.button
 {
-    @include lien($color: white);
-    @include btn();
+    display: flex;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    :hover
+    {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+        box-shadow: 0px 0px 10px 2px $darkergrey-color;
+    }
+    a
+    {
+        @include lien($color: white);
+        @include btn();
+    }
+}
+
+@mixin btn-hover 
+{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 10px 2px $darkergrey-color;
 }

@@ -14,15 +14,15 @@ $darkergrey-color: darken($grey-color,50%);
 $palegrey-color: #f6f6f6;
 $footer-color: #353535;
 
-@mixin lien($color: black ) 
+@mixin lien($color: black )
 {
     text-decoration: none;
     color: $color;
 }
 
-@mixin btn($background-color: linear-gradient(0.48turn, $secondary-color, $primary-color)) 
+@mixin btn($background-color: linear-gradient(0.48turn, $secondary-color, $primary-color), $width:150px) 
 {
-    width: 200px;
+    width: $width;
     height: 20px;
     padding: 20px;
     margin: auto;

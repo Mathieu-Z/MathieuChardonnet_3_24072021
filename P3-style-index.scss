@@ -44,7 +44,7 @@
     a
     {
         @include lien($color: white);
-        @include btn();
+        @include btn($width:200px);
     }
 }
 
