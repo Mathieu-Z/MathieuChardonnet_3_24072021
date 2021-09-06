@@ -150,15 +150,17 @@ footer .flien a .fas {
   margin-top: 2%;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 7px -3px #6b6b6b;
+  justify-content: space-between;
 }
 .menu .txtmenu {
-  width: 70%;
+  overflow: hidden;
 }
 .menu .prix {
   width: 20%;
   justify-content: flex-end;
 }
 .menu .prix p {
+  padding-top: 25px;
   text-align: end;
   height: auto;
 }
@@ -174,9 +176,10 @@ footer .flien a .fas {
   top: 50px;
 }
 .button :hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition-duration: 0.5s;
   box-shadow: 0px 0px 10px 2px #6b6b6b;
+  opacity: 0.8;
 }
 .button a {
   text-decoration: none;
