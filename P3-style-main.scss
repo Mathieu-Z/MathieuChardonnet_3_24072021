@@ -61,11 +61,15 @@ h3
     font-family: 'shrikhand', 'Times New Roman', Times, serif;
     font-size: 2em;
     margin: 0;
+    @media (max-width: 799px)
+    {
+        font-size: 1.5em;
+    }
 }
 
 h4
 {
-    font-size: 1.5;
+    font-size: 1.5em;
     margin: 0;
 }
 
@@ -99,6 +103,15 @@ h5
         margin: auto;
         position: relative;
         left: -15px;
+    }
+}
+
+.fa-heart
+{
+    &:hover
+    {
+        color: linear-gradient(0.50turn, $secondary-color, $primary-color);
+        background-color: linear-gradient(0.50turn, $secondary-color, $primary-color);
     }
 }
 
@@ -148,3 +161,4 @@ footer
         }
     }
 }
+

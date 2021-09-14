@@ -30,9 +30,14 @@ h3 {
   font-size: 2em;
   margin: 0;
 }
+@media (max-width: 799px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
 
 h4 {
-  font-size: 1.5;
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -63,6 +68,11 @@ h5 {
   margin: auto;
   position: relative;
   left: -15px;
+}
+
+.fa-heart:hover {
+  color: linear-gradient(0.5turn, #FF79DA, #9256dc);
+  background-color: linear-gradient(0.5turn, #FF79DA, #9256dc);
 }
 
 footer {
@@ -142,30 +152,73 @@ footer .flien a .fas {
   padding: 2%;
 }
 
+@-webkit-keyframes check {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes check {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .menu {
-  padding: 10px;
+  height: 60px;
   background-color: white;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 2%;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 7px -3px #6b6b6b;
   justify-content: space-between;
 }
+.menu:hover .prix > .selection {
+  display: block;
+  transform: translateX();
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+}
+.menu:hover .prix > .selection .fa-check-circle {
+  -webkit-animation: check 1000ms 500ms;
+          animation: check 1000ms 500ms;
+}
 .menu .txtmenu {
+  padding: 10px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .prix {
+  display: inline-flex;
   width: 20%;
   justify-content: flex-end;
 }
 .menu .prix p {
-  padding-top: 25px;
+  font-weight: bolder;
+  padding-top: 35px;
   text-align: end;
   height: auto;
+  margin-right: 10px;
 }
-.menu .selection {
+.menu .prix .selection {
   display: none;
+  width: 75px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  text-align: center;
+  padding-top: 15px;
+}
+.menu .prix .selection .fas {
+  color: white;
+  font-size: 1.75em;
 }
 
 .button {

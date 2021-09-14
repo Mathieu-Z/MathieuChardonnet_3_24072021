@@ -30,9 +30,14 @@ h3 {
   font-size: 2em;
   margin: 0;
 }
+@media (max-width: 799px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
 
 h4 {
-  font-size: 1.5;
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -63,6 +68,11 @@ h5 {
   margin: auto;
   position: relative;
   left: -15px;
+}
+
+.fa-heart:hover {
+  color: linear-gradient(0.5turn, #FF79DA, #9256dc);
+  background-color: linear-gradient(0.5turn, #FF79DA, #9256dc);
 }
 
 footer {
@@ -120,12 +130,14 @@ footer .flien a .fas {
   position: relative;
   -webkit-animation: load1 1.4s infinite linear;
           animation: load1 1.4s infinite linear;
+  -webkit-animation: load2 1s 2s;
+          animation: load2 1s 2s;
   transform: translateZ(0);
 }
 .loader:before {
   width: 50%;
   height: 50%;
-  background: #99e2d0;
+  background: #99E2D0;
   border-radius: 100% 0 0 0;
   position: absolute;
   top: 0;
@@ -133,7 +145,7 @@ footer .flien a .fas {
   content: "";
 }
 .loader:after {
-  background: #ffffff;
+  background: white;
   width: 75%;
   height: 75%;
   border-radius: 50%;
@@ -163,6 +175,43 @@ footer .flien a .fas {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes load2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes load2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loadacceuil {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loadacceuil {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.acceuil {
+  -webkit-animation: loadacceuil 1s 2s;
+          animation: loadacceuil 1s 2s;
+}
+
 .hlogo img {
   left: 0;
 }

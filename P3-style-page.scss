@@ -1,7 +1,5 @@
 @import "./P3-style-main.scss";
 
-
-
 .corps
 {
     background-color: $palegrey-color;
@@ -57,32 +55,72 @@
 
 @mixin plat 
 {
-    padding: 10px;
+    height: 60px;
     background-color: white;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     margin-top: 2%;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 4px 7px -3px $darkergrey-color;
     justify-content: space-between;
+    &:hover
+    {
+        .prix>.selection
+        {
+            display: block;
+            transform: translateX();
+            animation-duration: 1500ms;
+            .fa-check-circle
+            {
+                animation: check 1000ms 500ms;
+            }
+        }
+    }
     .txtmenu
     {
+        padding: 10px;
         overflow: hidden;
+        text-overflow: ellipsis;
     }
     .prix
     {
+        display: inline-flex;
         width: 20%;
         justify-content: flex-end;
         p
         {
-            padding-top: 25px;
+            font-weight: bolder;
+            padding-top: 35px;
             text-align: end;
             height: auto;
+            margin-right: 10px;
         }
+        .selection
+        {
+            display: none;
+            width: 75px;
+            background-color: $tertiary-color;
+            border-radius: 0 15px 15px 0;
+            text-align: center;
+            padding-top: 15px;
+            .fas
+            {
+                color: white;
+                font-size: 1.75em;
+            }
+        }    
     }
-    .selection
-    {
-        display: none;
+}
+
+@keyframes check 
+{
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(360deg);
     }
 }
 

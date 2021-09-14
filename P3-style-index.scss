@@ -11,12 +11,13 @@
     background: linear-gradient(to right, $tertiary-color 10%, rgba(153,226,208, 0) 42%);
     position: relative;
     animation: load1 1.4s infinite linear;
+    animation: load2 1s 2s;
     transform: translateZ(0);
     &:before
     {
         width: 50%;
         height: 50%;
-        background: #99e2d0;
+        background: $tertiary-color;
         border-radius: 100% 0 0 0;
         position: absolute;
         top: 0;
@@ -25,7 +26,7 @@
     }
     &:after
     {
-        background: #ffffff;
+        background: white;
         width: 75%;
         height: 75%;
         border-radius: 50%;
@@ -38,16 +39,40 @@
         right: 0;
     }
 }
-  @keyframes load1 
-  {
+@keyframes load1
+{
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(360deg);
     }
-  }
-  
+}
+
+@keyframes load2
+{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes loadacceuil 
+{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.acceuil
+{
+    animation: loadacceuil 1s 2s;
+}
 
 .hlogo
 {
