@@ -70,8 +70,7 @@
         .prix>.selection
         {
             display: block;
-            transform: translateX();
-            animation-duration: 1500ms;
+            transition: 2s;
             .fa-check-circle
             {
                 animation: check 1000ms 500ms;

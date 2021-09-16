@@ -183,9 +183,7 @@ footer .flien a .fas {
 }
 .menu:hover .prix > .selection {
   display: block;
-  transform: translateX();
-  -webkit-animation-duration: 1500ms;
-          animation-duration: 1500ms;
+  transition: 2s;
 }
 .menu:hover .prix > .selection .fa-check-circle {
   -webkit-animation: check 1000ms 500ms;

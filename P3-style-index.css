@@ -128,10 +128,8 @@ footer .flien a .fas {
   background: #99E2D0;
   background: linear-gradient(to right, #99E2D0 10%, rgba(153, 226, 208, 0) 42%);
   position: relative;
-  -webkit-animation: load1 1.4s infinite linear;
-          animation: load1 1.4s infinite linear;
-  -webkit-animation: load2 1s 2s;
-          animation: load2 1s 2s;
+  -webkit-animation: load1 1.4s linear;
+          animation: load1 1.4s linear;
   transform: translateZ(0);
 }
 .loader:before {
@@ -177,39 +175,58 @@ footer .flien a .fas {
 }
 @-webkit-keyframes load2 {
   0% {
-    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
   }
   100% {
-    opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes load2 {
   0% {
-    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
   }
   100% {
-    opacity: 0;
+    visibility: hidden;
   }
 }
+.loadercache {
+  -webkit-animation: load2 2s 1s;
+          animation: load2 2s 1s;
+}
+
 @-webkit-keyframes loadacceuil {
   0% {
-    opacity: 0;
+    visibility: hidden;
+  }
+  99% {
+    visibility: hidden;
   }
   100% {
-    opacity: 1;
+    visibility: visible;
   }
 }
+
 @keyframes loadacceuil {
   0% {
-    opacity: 0;
+    visibility: hidden;
+  }
+  99% {
+    visibility: hidden;
   }
   100% {
-    opacity: 1;
+    visibility: visible;
   }
 }
 .acceuil {
-  -webkit-animation: loadacceuil 1s 2s;
-          animation: loadacceuil 1s 2s;
+  visibility: hidden;
+  -webkit-animation: loadacceuil 3s 2s;
+          animation: loadacceuil 3s 2s;
 }
 
 .hlogo img {
@@ -301,6 +318,8 @@ footer .flien a .fas {
 }
 .Fbox .F1 .fas {
   color: #6b6b6b;
+  position: relative;
+  right: 5px;
 }
 .Fbox .F2 {
   display: flex;
@@ -327,6 +346,8 @@ footer .flien a .fas {
 }
 .Fbox .F2 .fas {
   color: #6b6b6b;
+  position: relative;
+  right: 5px;
 }
 .Fbox .F3 {
   display: flex;
@@ -352,17 +373,25 @@ footer .flien a .fas {
   }
 }
 .Fbox .F3 .fas {
+  color: #6b6b6b;
+  position: relative;
+  right: 5px;
+}
+.Fbox .F3 .fas {
   color: #9256dc;
 }
 
 .num {
   background-color: #9256dc;
+  font-size: larger;
   color: white;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   padding: 0.5%;
   border-radius: 100%;
   text-align: center;
+  position: relative;
+  right: 10px;
 }
 
 #ancre-restaurant {
@@ -384,10 +413,13 @@ footer .flien a .fas {
 @media (max-width: 799px) {
   #ancre-restaurant .restaurant a {
     width: auto;
+    display: flex;
+    flex-direction: column;
   }
 }
 #ancre-restaurant .restaurant a img {
   width: 100%;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0px 0px;
@@ -416,7 +448,17 @@ footer .flien a .fas {
   color: #278870;
   padding: 10px;
   z-index: 2;
-  position: absolute;
-  top: 12px;
-  right: 12px;
+  position: relative;
+  bottom: 390px;
+  left: 85%;
+}
+@media (max-width: 1300px) {
+  #ancre-restaurant .restaurant a .new {
+    left: 78%;
+  }
+}
+@media (max-width: 749px) {
+  #ancre-restaurant .restaurant a .new {
+    left: 70%;
+  }
 }/*# sourceMappingURL=P3-style-index.css.map */
