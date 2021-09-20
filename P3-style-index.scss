@@ -10,7 +10,7 @@
     background: $tertiary-color;
     background: linear-gradient(to right, $tertiary-color 10%, rgba(153,226,208, 0) 42%);
     position: relative;
-    animation: load1 1.4s linear;
+    animation: load1 2s linear;
     transform: translateZ(0);
     &:before
     {
@@ -130,6 +130,10 @@
     {
         @include lien($color: white);
         @include btn($width:200px);
+        &:hover
+        {
+            @include btn-hover();
+        }
     }
 }
 
