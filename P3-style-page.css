@@ -40,10 +40,27 @@ h4 {
   font-size: 1.5em;
   margin: 0;
 }
+h4::after {
+  content: "";
+  background: #99E2D0;
+  height: 2px;
+  width: 50px;
+  display: flex;
+}
+@media (max-width: 799px) {
+  h4 {
+    font-size: 1.2em;
+  }
+}
 
 h5 {
   font-size: 1.25em;
   margin: 0;
+}
+@media (max-width: 799px) {
+  h5 {
+    font-size: 1.1em;
+  }
 }
 
 .hlogo {
@@ -68,6 +85,12 @@ h5 {
   margin: auto;
   position: relative;
   left: -15px;
+}
+@media (max-width: 799px) {
+  .hlogo img {
+    width: 250px;
+    height: auto;
+  }
 }
 
 .fa-heart:hover {
@@ -183,11 +206,10 @@ footer .flien a .fas {
 }
 .menu:hover .prix > .selection {
   display: block;
-  transition: 2s;
 }
 .menu:hover .prix > .selection .fa-check-circle {
-  -webkit-animation: check 1000ms 500ms;
-          animation: check 1000ms 500ms;
+  -webkit-animation: check 750ms;
+          animation: check 750ms;
 }
 .menu .txtmenu {
   padding: 10px;
@@ -198,6 +220,11 @@ footer .flien a .fas {
   display: inline-flex;
   width: 20%;
   justify-content: flex-end;
+}
+@media (max-width: 799px) {
+  .menu .prix {
+    width: 25%;
+  }
 }
 .menu .prix p {
   font-weight: bolder;
@@ -214,9 +241,19 @@ footer .flien a .fas {
   text-align: center;
   padding-top: 15px;
 }
+@media (max-width: 799px) {
+  .menu .prix .selection {
+    padding-top: 18px;
+  }
+}
 .menu .prix .selection .fas {
   color: white;
   font-size: 1.75em;
+}
+@media (max-width: 799px) {
+  .menu .prix .selection .fas {
+    font-size: 1.5em;
+  }
 }
 
 .button {
@@ -229,8 +266,8 @@ footer .flien a .fas {
 .button :hover {
   transform: scale(1.05);
   transition-duration: 0.5s;
-  box-shadow: 0px 0px 10px 2px #6b6b6b;
-  opacity: 0.8;
+  box-shadow: 0px 7px 7px -1px #6b6b6b;
+  opacity: 0.9;
 }
 .button a {
   text-decoration: none;

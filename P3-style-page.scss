@@ -70,10 +70,9 @@
         .prix>.selection
         {
             display: block;
-            transition: 2s;
             .fa-check-circle
             {
-                animation: check 1000ms 500ms;
+                animation: check 750ms;
             }
         }
     }
@@ -88,6 +87,10 @@
         display: inline-flex;
         width: 20%;
         justify-content: flex-end;
+        @media (max-width: 799px)
+        {
+            width: 25%;
+        }
         p
         {
             font-weight: bolder;
@@ -104,10 +107,18 @@
             border-radius: 0 15px 15px 0;
             text-align: center;
             padding-top: 15px;
+            @media (max-width: 799px)
+            {
+                padding-top: 18px;
+            }
             .fas
             {
                 color: white;
                 font-size: 1.75em;
+                @media (max-width: 799px)
+                {
+                    font-size: 1.5em;
+                }
             }
         }    
     }
