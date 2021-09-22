@@ -129,7 +129,7 @@
     a
     {
         @include lien($color: white);
-        @include btn($width:200px);
+        @include btn($width: 200px);
         &:hover
         {
             @include btn-hover();

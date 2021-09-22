@@ -38,19 +38,42 @@
     }
 }
 
+@keyframes menuapparition
+{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@mixin apparition ($delai: 0ms)
+{
+    animation: menuapparition 1500ms both;
+    animation-delay: $delai;
+}
+
 .entrees
 {
     padding: 2%;
+    @include apparition()
 }
 
 .plats
 {
-    @extend .entrees;
+    padding: 2%;
+    @include apparition($delai: 500ms)
 }
 
 .desserts
 {
-    @extend .entrees;
+    padding: 2%;
+    @include apparition($delai: 1000ms)
 }
 
 @mixin plat 
@@ -156,4 +179,3 @@
         @include btn();
     }
 }
-
