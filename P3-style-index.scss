@@ -2,6 +2,7 @@
 
 .loader 
 {
+    top: 200px;
     font-size: 10px;
     margin: 50px auto;
     width: 11em;
@@ -10,7 +11,7 @@
     background: $tertiary-color;
     background: linear-gradient(to right, $tertiary-color 10%, rgba(153,226,208, 0) 42%);
     position: relative;
-    animation: load1 2s linear;
+    animation: load1 1.4s infinite linear;
     transform: translateZ(0);
     &:before
     {
@@ -63,7 +64,12 @@
 
 .loadercache
 {
-    animation: load2 2s 1s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    animation: load2 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes loadacceuil 
@@ -81,8 +87,8 @@
 
 .acceuil
 {
-    visibility: hidden;
-    animation: loadacceuil 3s 2s;
+    animation: loadacceuil 2s;
+    animation-fill-mode: forwards;
 }
 
 .hlogo
@@ -119,6 +125,10 @@
     h1
     {
         text-align: center;
+        @media (max-width: 799px)
+        {
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -142,6 +152,14 @@
     padding: 2%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 799px)
+    {
+        padding: 4%;
+    }
+    h1
+    {
+        margin-bottom: 2%;
+    }
     .fas
     {
 	    padding: 2%;
@@ -228,11 +246,14 @@
     box-shadow: 0px 4px 7px -3px $darkergrey-color;
     margin-top: 2.5%;
     margin-inline: 2%;
+    height: 470px;
     @media (max-width: 799px)
     {
         width: auto;
         display: flex;
         flex-direction: column;
+        margin-bottom: 5%;
+        height: 370px;
     }
     img
     {
@@ -241,11 +262,20 @@
         object-fit: cover;
         border-radius: 20px 20px 0px 0px;
         z-index: 1;
+        @media (max-width: 799px)
+        {
+            height: 300px;
+        }
     }
     .blocrestotxt
     {
         display: flex;
         flex-direction: row;
+        &__new
+        {
+            position: relative;
+            bottom: 40px;
+        }
         .restotxt
         {
             padding: 2%;
@@ -254,10 +284,7 @@
         }
         .coeur
         {
-            font-size: 1.75em;
-            width: 20%;
-            margin: auto;
-            text-align: center;
+            @include heart();
         }
     }
 }
@@ -286,10 +313,14 @@
                 {
                     left: 78%;
                 }
-                @media (max-width: 749px)
+                @media (max-width: 799px)
+                {
+                    bottom: 290px;
+                }
+                @media (max-width: 499px)
                 {
                     left: 70%;
-                }                                    
+                }
             }
         }
     }

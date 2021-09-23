@@ -93,11 +93,23 @@ h5 {
   }
 }
 
-.fa-heart:hover {
-  color: linear-gradient(0.5turn, #FF79DA, #9256dc);
-  background-color: linear-gradient(0.5turn, #FF79DA, #9256dc);
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   background-color: #353535;
   display: flex;

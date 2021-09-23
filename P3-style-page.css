@@ -93,11 +93,23 @@ h5 {
   }
 }
 
-.fa-heart:hover {
-  color: linear-gradient(0.5turn, #FF79DA, #9256dc);
-  background-color: linear-gradient(0.5turn, #FF79DA, #9256dc);
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   background-color: #353535;
   display: flex;
@@ -166,9 +178,35 @@ footer .flien a .fas {
   text-align: center;
   justify-content: space-around;
 }
+@media (max-width: 799px) {
+  .corps .corpsmenu .titre div {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
 .corps .corpsmenu .titre div .coeur {
   font-size: 1.75em;
   width: 20%;
+  margin: 0;
+  text-align: center;
+  display: grid;
+}
+.corps .corpsmenu .titre div .coeur .heart {
+  grid-row: 1;
+  grid-column: 2;
+}
+.corps .corpsmenu .titre div .coeur .heart__plein {
+  background: linear-gradient(1turn, #FF79DA, #9256dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.corps .corpsmenu .titre div .coeur .heart__plein:hover {
+  -webkit-animation: heart 1s linear;
+          animation: heart 1s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes menuapparition {
@@ -211,6 +249,12 @@ footer .flien a .fas {
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }
+@media (max-width: 799px) {
+  .plats {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
 
 .desserts {
   padding: 2%;
@@ -249,6 +293,11 @@ footer .flien a .fas {
   box-shadow: 0px 4px 7px -3px #6b6b6b;
   justify-content: space-between;
 }
+@media (max-width: 799px) {
+  .menu {
+    margin-top: 5%;
+  }
+}
 .menu:hover .prix > .selection {
   display: block;
 }
@@ -258,6 +307,13 @@ footer .flien a .fas {
 }
 .menu .txtmenu {
   padding: 10px;
+  overflow: hidden;
+}
+.menu .txtmenu h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .txtmenu p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -310,7 +366,7 @@ footer .flien a .fas {
 }
 .button :hover {
   transform: scale(1.05);
-  transition-duration: 0.5s;
+  transition: 0.5s ease-in-out;
   box-shadow: 0px 7px 7px -1px #6b6b6b;
   opacity: 0.9;
 }

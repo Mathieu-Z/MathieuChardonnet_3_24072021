@@ -28,10 +28,14 @@
             	flex-direction: row;
             	text-align: center;
             	justify-content: space-around;
+                @media (max-width: 799px)
+                {
+                    margin-top: 20px;
+                    margin-bottom: 15px;
+                }
             	.coeur
             	{
-                	font-size: 1.75em;
-                	width: 20%;
+                    @include heart($margin: 0);
             	}
             }
         }
@@ -61,19 +65,24 @@
 .entrees
 {
     padding: 2%;
-    @include apparition()
+    @include apparition();
 }
 
 .plats
 {
     padding: 2%;
-    @include apparition($delai: 500ms)
+    @include apparition($delai: 500ms);
+    @media (max-width: 799px)
+    {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
 }
 
 .desserts
 {
     padding: 2%;
-    @include apparition($delai: 1000ms)
+    @include apparition($delai: 1000ms);
 }
 
 @mixin plat 
@@ -88,6 +97,10 @@
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 4px 7px -3px $darkergrey-color;
     justify-content: space-between;
+    @media (max-width: 799px)
+    {
+        margin-top: 5%;
+    }
     &:hover
     {
         .prix>.selection
@@ -103,7 +116,16 @@
     {
         padding: 10px;
         overflow: hidden;
-        text-overflow: ellipsis;
+        h5
+        {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p
+        {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
     .prix
     {

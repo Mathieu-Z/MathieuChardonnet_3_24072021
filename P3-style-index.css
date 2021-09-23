@@ -93,11 +93,23 @@ h5 {
   }
 }
 
-.fa-heart:hover {
-  color: linear-gradient(0.5turn, #FF79DA, #9256dc);
-  background-color: linear-gradient(0.5turn, #FF79DA, #9256dc);
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   background-color: #353535;
   display: flex;
@@ -143,6 +155,7 @@ footer .flien a .fas {
 }
 
 .loader {
+  top: 200px;
   font-size: 10px;
   margin: 50px auto;
   width: 11em;
@@ -151,8 +164,8 @@ footer .flien a .fas {
   background: #99E2D0;
   background: linear-gradient(to right, #99E2D0 10%, rgba(153, 226, 208, 0) 42%);
   position: relative;
-  -webkit-animation: load1 2s linear;
-          animation: load1 2s linear;
+  -webkit-animation: load1 1.4s infinite linear;
+          animation: load1 1.4s infinite linear;
   transform: translateZ(0);
 }
 .loader:before {
@@ -219,8 +232,14 @@ footer .flien a .fas {
   }
 }
 .loadercache {
-  -webkit-animation: load2 2s 1s;
-          animation: load2 2s 1s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  -webkit-animation: load2 2s;
+          animation: load2 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes loadacceuil {
@@ -247,9 +266,10 @@ footer .flien a .fas {
   }
 }
 .acceuil {
-  visibility: hidden;
-  -webkit-animation: loadacceuil 3s 2s;
-          animation: loadacceuil 3s 2s;
+  -webkit-animation: loadacceuil 2s;
+          animation: loadacceuil 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .hlogo img {
@@ -280,6 +300,11 @@ footer .flien a .fas {
 .explication h1 {
   text-align: center;
 }
+@media (max-width: 799px) {
+  .explication h1 {
+    font-size: 1.5em;
+  }
+}
 
 .bexploration {
   display: flex;
@@ -298,7 +323,7 @@ footer .flien a .fas {
 }
 .bexploration a:hover {
   transform: scale(1.05);
-  transition-duration: 0.5s;
+  transition: 0.5s ease-in-out;
   box-shadow: 0px 7px 7px -1px #6b6b6b;
   opacity: 0.9;
 }
@@ -307,6 +332,14 @@ footer .flien a .fas {
   padding: 2%;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 799px) {
+  .fonctionnement {
+    padding: 4%;
+  }
+}
+.fonctionnement h1 {
+  margin-bottom: 2%;
 }
 .fonctionnement .fas {
   padding: 2%;
@@ -438,12 +471,15 @@ footer .flien a .fas {
   box-shadow: 0px 4px 7px -3px #6b6b6b;
   margin-top: 2.5%;
   margin-inline: 2%;
+  height: 470px;
 }
 @media (max-width: 799px) {
   #ancre-restaurant .restaurant a {
     width: auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5%;
+    height: 370px;
   }
 }
 #ancre-restaurant .restaurant a img {
@@ -454,9 +490,18 @@ footer .flien a .fas {
   border-radius: 20px 20px 0px 0px;
   z-index: 1;
 }
+@media (max-width: 799px) {
+  #ancre-restaurant .restaurant a img {
+    height: 300px;
+  }
+}
 #ancre-restaurant .restaurant a .blocrestotxt {
   display: flex;
   flex-direction: row;
+}
+#ancre-restaurant .restaurant a .blocrestotxt__new {
+  position: relative;
+  bottom: 40px;
 }
 #ancre-restaurant .restaurant a .blocrestotxt .restotxt {
   padding: 2%;
@@ -468,6 +513,24 @@ footer .flien a .fas {
   width: 20%;
   margin: auto;
   text-align: center;
+  display: grid;
+}
+#ancre-restaurant .restaurant a .blocrestotxt .coeur .heart {
+  grid-row: 1;
+  grid-column: 2;
+}
+#ancre-restaurant .restaurant a .blocrestotxt .coeur .heart__plein {
+  background: linear-gradient(1turn, #FF79DA, #9256dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+#ancre-restaurant .restaurant a .blocrestotxt .coeur .heart__plein:hover {
+  -webkit-animation: heart 1s linear;
+          animation: heart 1s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #ancre-restaurant .restaurant a .new {
   width: -webkit-fit-content;
@@ -486,7 +549,12 @@ footer .flien a .fas {
     left: 78%;
   }
 }
-@media (max-width: 749px) {
+@media (max-width: 799px) {
+  #ancre-restaurant .restaurant a .new {
+    bottom: 290px;
+  }
+}
+@media (max-width: 499px) {
   #ancre-restaurant .restaurant a .new {
     left: 70%;
   }

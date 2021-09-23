@@ -34,7 +34,7 @@ $footer-color: #353535;
 @mixin btn-hover 
 {
     transform: scale(1.05);
-    transition-duration: 0.5s;
+    transition: 0.5s ease-in-out;
     box-shadow: 0px 7px 7px -1px $darkergrey-color;
     opacity: 0.9;
 }
@@ -135,12 +135,39 @@ h5
     }
 }
 
-.fa-heart
+@mixin heart ($margin: auto)
 {
-    &:hover
+    font-size: 1.75em;
+    width: 20%;
+    margin: $margin;
+    text-align: center;
+    display: grid;
+    .heart
     {
-        color: linear-gradient(0.50turn, $secondary-color, $primary-color);
-        background-color: linear-gradient(0.50turn, $secondary-color, $primary-color);
+        grid-row: 1;
+        grid-column: 2;
+        &__plein
+        {
+            background: linear-gradient(1turn, $secondary-color, $primary-color);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            &:hover
+            {
+                animation: heart 1s linear;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes heart
+{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
